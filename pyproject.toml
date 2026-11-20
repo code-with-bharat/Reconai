@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reconai"
+version = "1.0.0"
+description = "ReconAI - Payment Reconciliation & Discrepancy Analysis Application"
+readme = "README.md"
+authors = [{name = "Antigravity Engineering"}]
+requires-python = ">=3.9"
+dependencies = [
+    "streamlit>=1.30.0",
+    "pandas>=2.0.0",
+    "reportlab>=4.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
